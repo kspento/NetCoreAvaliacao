@@ -37,7 +37,7 @@ namespace NetCoreAvaliacao.Infra.Data.Repositories
             return true;
         }
 
-        public async Task<Cliente> RetornaCLientePorId(Guid id)
+        public async Task<Cliente> RetornaClientePorId(Guid id)
         {
             return  await _appDbContext.Clientes.FindAsync(id);
         }

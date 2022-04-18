@@ -6,7 +6,7 @@ namespace NetCoreAvaliacao.Domain.Interfaces
 {
     public interface IClienteRepository
     {
-        Task<Cliente> RetornaCLientePorId(Guid id);
+        Task<Cliente> RetornaClientePorId(Guid id);
 
         Task<bool> RemoveCliente(Cliente cliente);
 

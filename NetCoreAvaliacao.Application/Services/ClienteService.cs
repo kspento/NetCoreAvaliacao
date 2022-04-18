@@ -29,7 +29,7 @@ namespace NetCoreAvaliacao.Application.Services
 
         public async Task<ClienteDTO> RetornaCliente(Guid id)
         {
-            var clienteEntity = await _clienteRepository.RetornaCLientePorId(id);
+            var clienteEntity = await _clienteRepository.RetornaClientePorId(id);
 
             if (clienteEntity == null)
             {
@@ -50,7 +50,7 @@ namespace NetCoreAvaliacao.Application.Services
 
         public async Task<bool> RemoveCliente(Guid id)
         {
-            var clienteEntity = await _clienteRepository.RetornaCLientePorId(id);
+            var clienteEntity = await _clienteRepository.RetornaClientePorId(id);
 
             if (clienteEntity == null)
             {
@@ -61,7 +61,7 @@ namespace NetCoreAvaliacao.Application.Services
 
         public async Task<ClienteDTO> AtualizaCliente (ClienteDTO cliente)
         {
-            var clienteEntity = await _clienteRepository.RetornaCLientePorId(cliente.IdCliente);
+            var clienteEntity = await _clienteRepository.RetornaClientePorId(cliente.IdCliente);
 
             if (clienteEntity == null)
             {

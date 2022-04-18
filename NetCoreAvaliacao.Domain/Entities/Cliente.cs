@@ -20,16 +20,16 @@ namespace NetCoreAvaliacao.Domain.Entities
         private void ValidateDomain(string nome, int idade)
         {
             DomainExceptionValidation.When(string.IsNullOrEmpty(nome),
-                "Nome Invalido. Nome é requerido");
+                "Nome Inválido. Nome é requerido");
 
             DomainExceptionValidation.When(nome.Length < 3,
-                "Nome Invalido. Nome tem que ter no minimo 3 caracteres");
+                "Nome Inválido. Nome tem que ter no minimo 3 caracteres");
 
             DomainExceptionValidation.When(nome.Length > 100,
-                "Nome Invalido. Nome tem que ter no maximo 100 caracteres");
+                "Nome Inválido. Nome tem que ter no maximo 100 caracteres");
 
             DomainExceptionValidation.When(idade < 1,
-                "Idade Invalida. A idade deve ser no mínimo 1 ano.");
+                "Idade Inválida. A idade deve ser no mínimo 1 ano.");
 
             Nome = nome;
 
